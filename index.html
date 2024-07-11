@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>일본 여행 가이드</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar-brand {
+      font-size: 24px; /* 폰트 사이즈 조정 */
+      font-weight: bold; /* 폰트 굵기 조정 */
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+    .navbar {
+      margin-bottom: 30px;
+    }
+    .section {
+      padding: 60px 0;
+    }
+    .bg-light {
+      background-color: #FFFFFF !important;
+    }
+    .bg-primary {
+      background-color: #BDBDBD !important;
+      color: white;
+    }
+    .bg-secondary {
+      background-color  #D1B2FF !important;
+      color: white;
+    }
+    .bg-success {
+      background-color: #3DB7CC !important;
+      color: white;
+    }
+    .bg-info {
+      background-color: #CCA63D !important;
+      color: white;
+    }
+    h2 {
+      margin-bottom: 30px;
+    }
+    .carousel-inner img,
+    .attraction-item img {
+      width: 100%;
+      height: auto;
+    }
+    .modal-body img {
+      max-width: 100%;
+      height: auto;
+    }
+    footer {
+      background-color: #BDBDBD;
+      padding: 20px 0;
+    }
+    .attraction-item {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .btn-details {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+    iframe {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- 내비게이션 바 - 항목을 변경하거나 추가할 수 있습니다 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">일본 여행 가이드 - 10404 김준휘</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#overview">개요</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#history">역사</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#attractions">관광지</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#tips">여행 팁</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 개요 섹션 -->
+  <section id="overview" class="section bg-primary">
+    <div class="container">
+      <h2 class="text-center">개요</h2>
+      <p>일본은 동아시아의 섬나라로, 풍부한 문화유산, 첨단 기술, 아름다운 풍경으로 유명합니다. 도쿄의 번화한 거리부터 교토의 고요한 사원까지, 일본은 현대와 전통의 독특한 조화를 제공합니다.</p>
+      <!-- 이미지 슬라이드 - 이미지를 변경하려면 src 속성 값을 수정하세요 -->
+      <div id="overviewCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <!-- 여기에 이미지 파일명을 추가하세요 -->
+            <img src="images/지도3.jpg" class="d-block w-100" alt="일본지도">
+          </div>
+          <div class="carousel-item">
+            <!-- 여기에 이미지 파일명을 추가하세요 -->
+            <img src="images/유산1.jpg" class="d-block w-100" alt="성">
+          </div>
+          <div class="carousel-item">
+            <!-- 여기에 이미지 파일명을 추가하세요 -->
+            <img src="images/풍경1.jpg" class="d-block w-100" alt="후지산">
+          </div>
+          <div class="carousel-item">
+            <!-- 여기에 이미지 파일명을 추가하세요 -->
+            <img src="images/도쿄1.jpg" class="d-block w-100" alt="도쿄타워">
+          </div>
+          <div class="carousel-item">
+            <!-- 여기에 이미지 파일명을 추가하세요 -->
+            <img src="images/교토1.jpg" class="d-block w-100" alt="교토사원">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#overviewCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">이전</span>
+        </a>
+        <a class="carousel-control-next" href="#overviewCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">다음</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 역사 섹션 -->
+  <section id="history" class="section bg-secondary">
+    <div class="container">
+      <h2 class="text-center">역사</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="attraction-item">
+            <img src="images/메이지유신1.jpg" alt="메이지 유신" class="img-fluid">
+            <p>메이지 유신</p>
+            <a href="#" class="btn btn-primary btn-details" data-toggle="modal" data-target="#historyModal1">상세보기</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="attraction-item">
+            <img src="images/일제강점기1.jpg" alt="일제강점기" class="img-fluid">
+            <p>일제강점기</p>
+            <a href="#" class="btn btn-primary btn-details" data-toggle="modal" data-target="#historyModal2">상세보기</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="attraction-item">
+            <img src="images/천주교1.png" alt="천주교 박해" class="img-fluid">
+            <p>천주교</p>
+            <a href="#" class="btn btn-primary btn-details" data-toggle="modal" data-target="#historyModal3">상세보기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 모달 - 역사 1 -->
+  <div class="modal fade" id="historyModal1" tabindex="-1" role="dialog" aria-labelledby="historyModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="historyModalLabel1">역사 1</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="images/japan_history1.jpeg" alt="일본 역사 1" class="img-fluid">
+          <p>교토조정의 천황을 정점으로 하는 구케와 제후, 그리고 하급 무사들을 중심으로 구 바쿠후 세력을 타도하고 1868년 7월 에도 막부가 위치한 에도를 도쿄로 바꾸고 이듬해에는 교토의 고쇼에서 도쿄의 고쿄로 천도했으며, 다양한 이유로 쉽게 연호가 바뀌던 것을 메이지 천황 대에 이르러서는 한 대에 한 연호만 쓸 수 있도록 한 일세일원제가 채택되는 등 모든 체제를 일신하여 중앙집권제를 강화했다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 모달 - 역사 2 -->
+  <div class="modal fade" id="historyModal2" tabindex="-1" role="dialog" aria-labelledby="historyModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="historyModalLabel2">역사 2</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="images/japan_history2.jpeg" alt="일본 역사 2" class="img-fluid">
+          <p>1910년 8월 22일 일본은 대한제국 정부를 위협하여 국권을 강탈하고, 한반도의 완전한 지배를 위해 대한제국을 감시하기 위해 설치했던 통감부를 일본 천황이 직접 임명한 총독이 관리하는 조선총독부로 바꾸었다. 또 친일파이거나 일본어에 능통한 소수를 제외하고는 대한제국 관료들의 자리는 일본인들에게 배분되었다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 모달 - 역사 3 -->
+  <div class="modal fade" id="historyModal3" tabindex="-1" role="dialog" aria-labelledby="historyModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="historyModalLabel3">역사 3</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="images/japan_history3.jpeg" alt="일본 역사 3" class="img-fluid">
+          <p>일본 천주교의 역사는 16세기 포르투갈 선교사들이 처음 일본에 도착하면서 시작된다. 이 초기 선교 활동은 일본 사회 내에서 다양한 반응을 불러일으켰으며,일부 지역에서는 초기에 긍정적인 반응을 얻기도 했다. 그러나 시간이 지남에 따라,천주교는 일본의 정치적,사회적 질서에 도전하는 요소로 여겨지기 시작했고,이는 결국 천주교에 대한 박해로 이어졌다</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 관광지 섹션 -->
+  <section id="attractions" class="section bg-success">
+    <div class="container">
+      <h2 class="text-center">관광지</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="attraction-item">
+            <img src="images/유니버셜1.jpg" alt="유니버셜 스튜디오 재팬" class="img-fluid">
+            <p>오사카 유니버셜 스튜디오 재팬</p>
+            <a href="#" class="btn btn-primary btn-details" data-toggle="modal" data-target="#attractionModal1">상세보기</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="attraction-item">
+            <img src="images/시부야스카이1.jpg" alt="시부야 스카이" class="img-fluid">
+            <p>도쿄 시부야 스카이</p>
+            <a href="#" class="btn btn-primary btn-details" data-toggle="modal" data-target="#attractionModal2">상세보기</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="attraction-item">
+            <img src="images/유후인1.jpg" alt="유후인 온천" class="img-fluid">
+            <p>규슈 유후인 온천</p>
+            <a href="#" class="btn btn-primary btn-details" data-toggle="modal" data-target="#attractionModal3">상세보기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 모달 - 관광지 1 -->
+  <div class="modal fade" id="attractionModal1" tabindex="-1" role="dialog" aria-labelledby="attractionModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="attractionModalLabel1">관광지 1</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="images/japan_attraction1.jpeg" alt="일본 관광지 1" class="img-fluid">
+          <p>유니버셜 스튜디오 재팬은 다양한 영화와 캐릭터들을 주제로 한 다채로운 어트랙션들을 제공합니다. 해리 포터, 마블, 미니언즈 등 유명한 캐릭터들의 세계를 직접 체험할 수 있는 장소로, 영화 속에서만 볼 수 있었던 장면들을 실제로 경험할 수 있는 기회를 제공합니다. 그리고 또유니버셜 스튜디오 재팬은 교토와 나라 등 오사카 주변의 다른 관광지로의 접근성이 좋아 여행 일정을 다양하게 계획할 수 있는 장점도 가지고 있습니다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 모달 - 관광지 2 -->
+  <div class="modal fade" id="attractionModal2" tabindex="-1" role="dialog" aria-labelledby="attractionModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="attractionModalLabel2">관광지 2</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="images/japan_attraction2.jpeg" alt="일본 관광지 2" class="img-fluid">
+          <p>시부야 스카이는 시부야 스크램블 스퀘어 타워 47층(최상층)에 있는, 높이 229미터의 전망대입니다. 옥외 360도 파노라마 뷰로 도쿄를 한눈에 볼 수 있고, 발 아래로 시부야 스크램블 교차로를 내려다볼 수 있습니다. 도쿄 스카이트리와 후지산까지 볼 수 있습니다. 14층 입구부터 최상층까지의 이동 공간에서도 영상, 입체음향, 자연광 연출을 통해 지적 호기심을 자극하는 체험을 즐길 수 있습니다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 모달 - 관광지 3 -->
+  <div class="modal fade" id="attractionModal3" tabindex="-1" role="dialog" aria-labelledby="attractionModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="attractionModalLabel3">관광지 3</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="images/japan_attraction3.jpeg" alt="일본 관광지 3" class="img-fluid">
+          <p>파란색을 띄는 온천입니다. 원래는 탄산수소염천이라는 분류이지만, 고온과 고압의 요소가 가해져서 변화한 것 같다고 한다. 전국에서도 매우 희소한 온천이다. 온천수는 입욕시에는 미끌미끌하고 부드러우며 온천 후에는 매끌매끌해져 촉촉한 피부가 된다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 여행 팁 섹션 -->
+  <section id="tips" class="section bg-info">
+    <div class="container">
+      <h2 class="text-center">여행 팁</h2>
+      <ul>
+        <li>방문하기 좋은 시기: 봄 (3월~5월)과 가을 (9월~11월).</li>
+        <li>언어: 일본어. 주요 도시에서는 영어도 사용되지만, 기본적인 일본어 구문을 배우면 도움이 됩니다.</li>
+        <li>통화: 일본 엔 (JPY).</li>
+        <li>교통: 일본은 기차, 버스, 지하철 등 광범위한 교통망을 자랑합니다. JR 패스는 장거리 여행에 매우 유용합니다.</li>
+      </ul>
+      <div class="text-center">
+        <!-- 여기에 YouTube 동영상 링크를 추가하세요 -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fMjkJqeq6oU?si=ZWzAShsm-zO-RrkJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <p>&copy; 2024 일본 여행 가이드. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
